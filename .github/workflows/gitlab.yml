@@ -13,6 +13,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
+      - name: Set Up Git
+        run: |
+          git config --global user.email "daengpython@gmail.com"
+          git config --global user.name "Alan Nuari"
+
       - name: Push to GitLab
         run: |
           git remote add gitlab https://gitlab.com/daengpython/svelte-qrcode.git
