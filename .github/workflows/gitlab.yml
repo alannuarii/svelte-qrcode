@@ -21,6 +21,6 @@ jobs:
       - name: Push to GitLab
         run: |
           git remote add gitlab https://daengpython:${{ secrets.GITLAB_TOKEN }}@gitlab.com/daengpython/svelte-qrcode.git
-          git push gitlab master
+          git push gitlab main
         env:
           GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
