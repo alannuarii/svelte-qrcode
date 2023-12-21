@@ -16,6 +16,7 @@
 			light: '#FFFFFF'
 		}
 	};
+	
 
 	const generateQR = async () => {
 		qrCode = await QRCode.toDataURL(url, options);
