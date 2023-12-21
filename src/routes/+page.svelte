@@ -17,8 +17,6 @@
 		}
 	};
 
-	$: console.log(options.width);
-
 	const generateQR = async () => {
 		qrCode = await QRCode.toDataURL(url, options);
 	};
