@@ -37,7 +37,7 @@
 <main>
 	<div class="container-lg container-fluid position-absolute top-50 start-50 translate-middle">
 		<div class="card rounded-5 p-5 bg-primary-subtle shadow">
-			<h1 class="text-center mb-4">QR CODE GENERATOR CUY</h1>
+			<h1 class="text-center mb-4">QR CODE GENERATOR</h1>
 			<div class="d-flex">
 				<input
 					type="text"
