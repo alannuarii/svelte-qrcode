@@ -2,14 +2,18 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-# Copy only the package.json and package-lock.json to leverage Docker cache
-COPY package*.json .
+# Copy only the necessary files for dependency installation
+COPY package*.json ./
 
 # Install dependencies
-RUN npm install
+RUN npm ci
 
-# Copy the rest of the application code
+# Copy the entire application code
 COPY . .
 
+# Build the application for production
+RUN npm run build && npm prune --production
+
 # Command to run the application
-CMD ["npm", "run", "dev"]
+CMD ["node", "build/index.js"]
+
